@@ -1,0 +1,222 @@
+@font-face {
+    font-family: monument;
+    src: url(./Font/MonumentExtended-FreeForPersonalUse/MonumentExtended-Regular.otf);
+}
+@font-face {
+    font-family: apercu;
+    src: url(./Font/apercu/Apercu\ Regular.otf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+html,body{
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+}
+.container{
+    background-color: #E6E6E6;
+    height: 100%;
+    width: 100vw;
+    overflow-x: hidden;
+}
+.container::-webkit-scrollbar{
+    display: none;
+}
+.navbar{
+    /* background-color: lightcoral; */
+    height:10vh ;
+    width: 100vw;
+    display: flex;
+}
+.navbar h1{
+    /* background-color: red; */
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monument;
+    font-size: 2vw;
+}
+.navbar ul{
+    /* background-color: blue; */
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar ul #left{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* background-color: yellow; */
+    column-gap: 8vw;
+    padding-left: 1.5vw;
+}
+.navbar ul #left li{
+    font-family:monument;
+    font-size: 0.9vw;
+    cursor: pointer;
+}
+.navbar ul #left li:hover{
+    text-decoration: underline;
+}
+.navbar ul #right{
+    padding-right: 1.5vw;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    /* background-color: green; */
+    column-gap: 8vw;
+}
+.navbar ul #right li{
+    font-family: monument;
+    font-size: 0.9vw;
+    cursor: pointer;
+}
+.navbar ul #right li:hover{
+    text-decoration:underline;
+}
+.navbar #hamburg{
+    display: none;
+}
+main{
+    width: 100vw;
+    height: calc(100vh - 30vh);
+    /* background-color: lightgreen; */
+}
+main .top{
+    width: 100%;
+    height: 40%;
+    /* background-color: lightsalmon; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding-right: 1.5vw;
+    overflow: hidden;
+}
+main .top h2{
+    font-family: apercu;
+    text-transform: uppercase;
+    font-size: 2vw;
+}
+main .top h2:hover{
+    font-size: 2.2vw;
+    cursor: pointer;
+    animation-name: jyotishman;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+}
+
+main .bottom{
+    width: 100%;
+    height: calc(100% - 40%);
+    /* background-color: lightseagreen; */
+}
+main .bottom h1{
+    font-family: apercu;
+    text-transform: uppercase;
+    font-size: 5.5vw;
+    padding-left: 2.2vw;
+    line-height: 5vw;
+}
+
+.image{
+    width: 100vw;
+    height: 50vh;
+    overflow: hidden;
+}
+.image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+@keyframes jyotishman {
+    from{
+        font-size: 2vw;
+    }
+    to{
+        font-size: 2.2vw;
+        cursor: pointer;
+    }
+}
+
+@media (max-width : 600px) {
+    .navbar{
+        /* background-color: lightcoral; */
+        height:10vh ;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        padding: 1vh;
+    }
+    .navbar h1{
+        width: fit-content;
+        font-size: 5vw;
+        padding: 1vh;
+    }
+    .navbar ul{
+        display: none;
+    }
+    .navbar #hamburg{
+        display: initial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.8vh;
+        cursor: pointer;
+    }
+    main{
+        width: 100vw;
+        height: 45vh;
+        /* background-color: lightgreen; */
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    main .top{
+        width: 100%;
+        height: 40%;
+        /* background-color: lightsalmon; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+        padding-right: 1.5vw;
+        overflow: hidden;
+    }
+    main .top h2{
+        font-family: apercu;
+        text-transform: uppercase;
+        font-size: 2.3vh;
+    }
+    main .top h2:hover{
+        font-size: 2.3vh;
+        cursor: none;
+    }
+    
+    main .bottom{
+        width: 100%;
+        height: 70%;
+        /* background-color: lightseagreen; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    main .bottom h1{
+        font-family: apercu;
+        text-transform: uppercase;
+        font-size: 5.5vh;
+        padding-left: 2.2vw;
+        line-height: 11vw;
+    }
+}
